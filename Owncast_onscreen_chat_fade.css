@@ -1,0 +1,39 @@
+/*
+ * CSS for displaying your Owncast chat onscreen in OBS
+ * to be usded with [Your_Owncast_URL]/embed/chat/readonly
+ */
+
+/* the actual animation - only the last 10% are the fade effect */
+@keyframes fade {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#messages-container {
+  vertical-align: bottom;   /* to ensure the messagees scroll up from the bottom */
+}
+
+.message {
+  margin: .25em;
+  padding: .15em .4em;
+  animation: fade 12s;   /* the fade effect: overall display time 12 s */
+  opacity: 0;   /* to ensure the message is not displayed after the fade out */
+}
+
+.message-author,
+.message-text {
+  display: inline;   /* to put username and message in one line */
+}
+
+.message-author {
+  padding: 0;
+}
+
+.message-text {
+  padding: 0 0 0 .5em;
+}
+
+.message-user-joined {
+  display: none;   /* remove user-joined-alerts (don't call out lurkers!) */
+}
