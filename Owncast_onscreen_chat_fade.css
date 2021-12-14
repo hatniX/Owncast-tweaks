@@ -37,3 +37,7 @@
 .message-user-joined {
   display: none;   /* remove user-joined-alerts (don't call out lurkers!) */
 }
+
+.message-name-change {
+  display: none;   /* remove name-change-alerts (this is not really necessary) */
+}
